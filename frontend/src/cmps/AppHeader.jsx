@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/imgs/logo.svg'
 import { HiMenu, HiX } from "react-icons/hi"
@@ -44,13 +44,12 @@ export function AppHeader() {
     }
 
     if (window.innerWidth > 630 + 'px') setIsSideMenu(false)
-    console.log('side-menu', sideMenu)
     return (
         <div className={`bg-header ${stickyClass}`} ref={headerRef}>
             <header className='app-header flex between align-center'>
                 <div className='logo'>
                     <Link to={'/'} className=' flex align-center'>
-                        <img src={Logo} alt='app logo' />
+                        <img src={Logo} alt='Happy Tails' />
                     </Link>
                 </div>
                 <nav className='main-nav flex'>
