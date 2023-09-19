@@ -19,6 +19,13 @@
         }
 
         .main-nav {
+            &.side-menu {
+                @include for-narrow-layout {
+                    background: none;
+                }
+
+                background-color: #00000084;
+            }
 
             width: 100%;
             height: 100%;
@@ -26,7 +33,8 @@
             top: 0;
             left: 0;
             z-index: 100;
-            background-color: #00000084;
+            background: none;
+            // transition: .2s ease-in;
 
             @include for-narrow-layout {
                 background: none;
@@ -40,12 +48,17 @@
                 background-color: #fff;
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: rem(-240px);
                 z-index: 200;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 gap: rem(32px);
+                transition: .2s ease-in;
+
+                &.side-menu {
+                    right: 0;
+                }
 
                 li {
                     a {

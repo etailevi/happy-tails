@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/imgs/logo.svg'
-import { BiMenu } from "react-icons/bi";
+import { HiMenu, HiX } from "react-icons/hi"
 export function AppHeader() {
     const navLinks = [
         {
@@ -41,9 +41,11 @@ export function AppHeader() {
     }
 
     function toggleMenu() {
-        menuRef.current.classList.toggle()
+        setIsSideMenu(prev => !prev)
     }
 
+    if (window.innerWidth > 630 + 'px') setIsSideMenu(false)
+    console.log('side-menu', sideMenu)
     return (
         <div className={`bg-header ${stickyClass}`} ref={headerRef}>
             <header className='app-header flex between align-center'>
@@ -52,8 +54,8 @@ export function AppHeader() {
                         <img src={Logo} alt='app logo' />
                     </Link>
                 </div>
-                <nav className='main-nav flex' ref={menuRef} onClick={(prev) => setIsSideMenu(!prev)}>
-                    <ul className='clean-list flex'>
+                <nav className={`main-nav flex ${sideMenu}`} ref={menuRef} onClick={toggleMenu}>
+                    <ul className={`clean-list flex ${sideMenu}`}>
                         {
                             navLinks.map((link, idx) =>
                                 <li key={idx}>
@@ -70,8 +72,8 @@ export function AppHeader() {
                         Login
                     </Link>
                 </div>
-                <span className='btn-menu hidden' onClick={(prev) => setIsSideMenu(!prev)}>
-                    <BiMenu />
+                <span className='btn-menu hidden' onClick={toggleMenu}>
+                    {isSideMenu ? <HiX /> : <HiMenu />}
                 </span>
             </header>
         </div>
