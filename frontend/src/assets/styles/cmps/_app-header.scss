@@ -106,8 +106,8 @@
 
         }
 
-        @include for-narrow-layout {
-            .hidden {
+        .hidden {
+            @include for-narrow-layout {
                 display: none;
             }
         }
