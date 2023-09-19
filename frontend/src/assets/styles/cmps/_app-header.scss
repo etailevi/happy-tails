@@ -20,8 +20,6 @@
 
         .main-nav {
             .backdrop {
-
-
                 &.side-menu {
                     @include for-narrow-layout {
                         background: none;
@@ -35,7 +33,6 @@
                     top: 0;
                     left: 0;
                 }
-
 
                 z-index: 100;
                 background: none;
@@ -109,11 +106,10 @@
             right: 20px;
             font-size: rem(24px);
 
-        }
-
-        .hidden {
-            @include for-narrow-layout {
-                display: none;
+            &.hidden {
+                @include for-narrow-layout {
+                    display: none;
+                }
             }
         }
     }
