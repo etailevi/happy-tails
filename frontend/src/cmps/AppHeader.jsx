@@ -22,7 +22,6 @@ export function AppHeader() {
     const [isSideMenu, setIsSideMenu] = useState(false)
     const sideMenu = isSideMenu ? 'side-menu' : ''
     const headerRef = useRef(null)
-    const menuRef = useRef(null)
 
     useEffect(() => {
         handleStickyHeader()
@@ -54,7 +53,8 @@ export function AppHeader() {
                         <img src={Logo} alt='app logo' />
                     </Link>
                 </div>
-                <nav className={`main-nav flex ${sideMenu}`} ref={menuRef} onClick={toggleMenu}>
+                <nav className='main-nav flex'>
+                    <div className={`backdrop ${sideMenu}`} onClick={toggleMenu}></div>
                     <ul className={`clean-list flex ${sideMenu}`}>
                         {
                             navLinks.map((link, idx) =>

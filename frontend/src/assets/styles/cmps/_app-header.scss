@@ -19,22 +19,28 @@
         }
 
         .main-nav {
-            &.side-menu {
-                @include for-narrow-layout {
-                    background: none;
+            .backdrop {
+
+
+                &.side-menu {
+                    @include for-narrow-layout {
+                        background: none;
+                    }
+
+                    background-color: #00000084;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                    right: rem(240px);
+                    top: 0;
+                    left: 0;
                 }
 
-                background-color: #00000084;
-            }
 
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-            background: none;
-            // transition: .2s ease-in;
+                z-index: 100;
+                background: none;
+                // transition: .2s ease-in;
+            }
 
             @include for-narrow-layout {
                 background: none;
