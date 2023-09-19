@@ -1,0 +1,11 @@
+// Colors
+
+$primaryClr: #0067FF;
+$yellowClr: #FEB60D;
+$purpleClr: #9771FF;
+$cyanClr: #01B5C5;
+$headerClr: #181A1E;
+$textClr: #4E545F;
+
+$shadow: rgba(17, 12, 46, .15) 0 48px 100px 0;
+$gradient: linear-gradient(135deg, #fff, lighten($cyanClr, 50) 10%, #fff 40% 60%, lighten($yellowClr, 35) 90%, #fff 105%);
