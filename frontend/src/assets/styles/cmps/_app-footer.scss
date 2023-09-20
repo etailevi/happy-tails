@@ -1,0 +1,89 @@
+.app-footer {
+    padding: rem(20px);
+    max-width: rem(1320px);
+    margin: 0 auto;
+
+    .footer-content {
+        gap: rem(15px);
+
+        .footer-details {
+            margin-block-end: rem(25px);
+            min-height: rem(135px);
+
+            .copyrights {
+                justify-content: flex-start;
+                gap: rem(10px);
+
+                img {
+                    height: rem(50px);
+                    width: max-content;
+                }
+
+                p {
+                    font-size: rem(14px);
+                    color: lighten($textClr, 30);
+                }
+            }
+
+            .social-links {
+                gap: rem(6px);
+
+                a {
+                    padding-block: rem(6px);
+                    gap: rem(3px);
+                    color: $headerClr;
+                    font-size: rem(14px);
+
+                    &:hover i {
+                        background-color: $primaryClr;
+                        border: 1px solid transparent;
+                        color: #fff;
+                        transition: .1s ease-in-out;
+                    }
+
+                    &:hover span {
+                        color: $primaryClr;
+                    }
+
+                    i {
+                        width: rem(25px);
+                        height: rem(25px);
+                        padding: rem(5px);
+                        border-radius: 50%;
+                        border: 1px solid $headerClr;
+                    }
+
+                    span {
+                        font-size: rem(12px);
+                        transition: .1s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .quick-links {
+            width: rem(400px);
+            gap: 30px;
+
+            &>* {
+                ul {
+                    margin-block: rem(25px);
+                    gap: rem(15px);
+
+                    a {
+                        color: lighten($textClr, 20);
+                        font-size: rem(14px);
+
+                        &:visited {
+                            color: lighten($textClr, 20);
+                        }
+
+                        &:hover {
+                            filter: brightness(70%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
