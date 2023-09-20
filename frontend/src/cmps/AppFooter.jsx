@@ -56,7 +56,9 @@ export function AppFooter() {
             <main className='footer-content flex between wrap'>
                 <section className='footer-details flex between column'>
                     <div className='copyrights flex between column '>
-                        <img src={logo} alt="Happy Tails logo" />
+                        <Link to={'/'}>
+                            <img src={logo} alt="Happy Tails logo" />
+                        </Link>
                         <p>Copyright © {year} developed by Tamar millgram and Etai Levi.</p>
                     </div>
                     <div className="social-links flex align-center wrap">
