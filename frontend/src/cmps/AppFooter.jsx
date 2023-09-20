@@ -68,7 +68,7 @@ export function AppFooter() {
                                 key={idx}
                                 target='_blank'
                                 className='flex center'>
-                                <i className='flex center'>{link.icon}</i>
+                                <label className='flex center'>{link.icon}</label>
                                 {link.name && <span>{link.name}</span>}
                             </Link>
                         ))}

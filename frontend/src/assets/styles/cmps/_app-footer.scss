@@ -34,7 +34,7 @@
                     color: $headerClr;
                     font-size: rem(14px);
 
-                    &:hover i {
+                    &:hover label {
                         background-color: $primaryClr;
                         border: 1px solid transparent;
                         color: #fff;
@@ -45,7 +45,7 @@
                         color: $primaryClr;
                     }
 
-                    i {
+                    label {
                         width: rem(25px);
                         height: rem(25px);
                         padding: rem(5px);

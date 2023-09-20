@@ -71,9 +71,9 @@ export function AppHeader() {
                         Login
                     </Link>
                 </div>
-                <span className='btn-menu hidden' onClick={toggleMenu}>
+                <button className='btn btn-menu hidden' onClick={toggleMenu}>
                     {isSideMenu ? <HiX /> : <HiMenu />}
-                </span>
+                </button>
             </header>
         </div>
     )
