@@ -20,8 +20,12 @@
                 }
 
                 p {
-                    font-size: rem(14px);
                     color: lighten($textClr, 30);
+                    font-size: rem(12px);
+
+                    @include for-narrow-layout {
+                        font-size: rem(14px);
+                    }
                 }
             }
 
