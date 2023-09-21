@@ -69,6 +69,10 @@
             width: rem(400px);
             gap: 30px;
 
+            h3 {
+                color: $headerClr;
+            }
+
             &>* {
                 ul {
                     margin-block: rem(25px);
