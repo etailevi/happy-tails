@@ -47,7 +47,7 @@
                 height: 100%;
                 width: rem(240px);
                 background-color: #fff;
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: rem(-240px);
                 z-index: 200;
@@ -62,6 +62,8 @@
                 }
 
                 li {
+                    line-height: 1;
+
                     a {
                         &:visited {
                             color: $headerClr;
@@ -99,7 +101,7 @@
         }
 
         .btn-menu {
-            position: absolute;
+            position: fixed;
             z-index: 2000;
             top: 27px;
             right: 20px;
